@@ -1,0 +1,31 @@
+package com.anand.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
+@RestController
+@RequestMapping("/anand")
+public class breakerController {
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @GetMapping
+    @CircuitBreaker(name = "CircuitBreakerDemoService", fallbackMethod = "getHandleService")
+    public String home() {
+        System.out.println("Inside circuit breaker");
+
+        String response = restTemplate.getForObject("http://localhost:9090/test", String.class);
+        return response; // Returning actual response instead of a fixed string
+    }
+
+    public String getHandleService(Throwable throwable) {
+        // Fallback logic
+        return "This is the fallback method response";
+    }
+}

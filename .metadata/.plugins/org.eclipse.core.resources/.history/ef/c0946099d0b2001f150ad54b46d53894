@@ -1,0 +1,5 @@
+package com.anand.event;
+
+public class OrderPlaceEvent {
+
+}
