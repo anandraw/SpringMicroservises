@@ -38,5 +38,36 @@ Each module or directory contains one or more patterns or concepts explained wit
 
 ---
 
+---
+
+## 🤝 Contributing
+
+I'm actively updating this repository as I learn and build.  
+If you're a developer looking to contribute or collaborate, feel free to create a pull request or drop suggestions via issues.
+
+---
+
+## 📌 Goal
+
+To become a **highly skilled backend developer** by mastering scalable, reliable, and maintainable microservices architecture — and to help others by sharing everything open-source.
+
+---
+
+## 📬 Stay Connected
+
+Follow me on LinkedIn for regular updates:  
+🔗 [https://www.linkedin.com/in/anandrawool](https://www.linkedin.com/in/anand-rawool-96a8bb1aa/)
+
+---
+
+## 📜 License
+
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+⭐ **If you found this helpful, don't forget to Star and Share the repo!**
+
+
 
 
