@@ -8,7 +8,9 @@ public enum VehicleType {
 
     BIKE(1, 10),
     Car(5, 30),
+    SUV(7,20),
     AUTO_RICKSHAW(3, 15);
+
 
     private final int capacity;
     private final double baseFare;

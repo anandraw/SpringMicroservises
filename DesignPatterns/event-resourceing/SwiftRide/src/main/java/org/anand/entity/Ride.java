@@ -51,7 +51,7 @@ public class Ride {
         this.driver = driver;
         this.status = RideStatus.CONFIRMED;
         notify("Driver " + driver.getName() + " assigned to ride");
-        driver.setAvailable(false);
+        driver.isAvailable();
         driver.getRides().add(this);
         rider.getRides().add(this);
     }
@@ -60,7 +60,7 @@ public class Ride {
         this.status = newStatus;
         notify("Ride status updated to " + newStatus.getValue());
         if (newStatus == RideStatus.COMPLETED && driver != null) {
-            driver.setAvailable(true);
+            driver.isAvailable();
         }
     }
 }
